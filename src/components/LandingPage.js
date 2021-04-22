@@ -5,6 +5,8 @@ import ProthonAlo from "../images/prothomalo.png";
 
 function LandingPage() {
   const [landingData, setLandingData] = useState([]);
+
+  // Fetch Data with axios from data.json file
   const getData = async () => {
     const response = await axios.get("data.json");
     return response.data;
@@ -20,15 +22,13 @@ function LandingPage() {
   }, []);
   return (
     <div className="container">
-          <div className="header">
-            <img src={ProthonAlo} alt="Prothom alo" />
-          </div>
-          <hr></hr>
-          <div className="landingData">
-            {landingData.map((data) => (
-              <Screen data={data} />
-            ))}
-          </div>
+      <div className="header">
+        <img src={ProthonAlo} alt="Prothom alo" />
+      </div>
+      <hr></hr>
+      <div className="landingData">
+        {landingData && landingData?.map((data) => <Screen data={data} />)}
+      </div>
     </div>
   );
 }
