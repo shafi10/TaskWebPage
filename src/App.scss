@@ -40,13 +40,20 @@ body {
           .links {
             text-decoration: none;
             color: black;
+            &:hover{
+              color: darkblue;
+            }
           }
+
         }
 
         p {
           margin: 2px;
           padding: 0 3px;
           font-size: 7px;
+        }
+        .timeforstatus{
+          margin-left: 5px;
         }
       }
       &:nth-child(1) {

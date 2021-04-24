@@ -51,7 +51,7 @@ export const _dateFormatter = (param) => {
   };
 
 
-  console.log(totaldays)
+ // console.log(totaldays)
 
   var bangla_converted_number = dateTime.getDigitBanglaFromEnglish();
   return {
